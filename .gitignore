@@ -182,4 +182,4 @@ $RECYCLE.BIN/
 # End of https://www.gitignore.io/api/git,node,code,linux,macos,windows
 
 # Application specific
-.todorc
+.todorc*
