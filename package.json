@@ -2,7 +2,7 @@
   "name": "@titonobre/todo",
   "version": "0.4.0",
   "description": "A CLI for TargetProcess because using TargetProcess on the web is overrated! And slow.",
-  "type": "commonjs",
+  "type": "module",
   "author": {
     "name": "Tito Nobre",
     "url": "https://github.com/titonobre"
@@ -31,11 +31,11 @@
   "license": "MIT",
   "dependencies": {
     "axios": "^1.4.0",
-    "chalk": "^4.1.2",
+    "chalk": "^5.2.0",
     "commander": "^10.0.1",
     "html-to-text": "^9.0.5",
     "ini": "^4.1.0",
-    "inquirer": "^8.2.5",
+    "inquirer": "^9.2.0",
     "mkdirp": "^3.0.1",
     "rc": "1.2.8"
   },

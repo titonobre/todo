@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 
-const rc = require('rc');
-const program = require('commander');
+import rc from 'rc';
+import { program } from 'commander';
 
-const { getTasks } = require('./lib/tasks');
-const { generateConfig } = require('./lib/config');
-const { printTasks } = require('./lib/printer');
+import { getTasks } from './lib/tasks.js';
+import { generateConfig } from './lib/config.js';
+import { printTasks } from './lib/printer.js';
 
 const defaultConfig = {
   targetProcess: {
