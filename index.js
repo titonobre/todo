@@ -3,7 +3,7 @@
 const rc = require('rc');
 const program = require('commander');
 
-const { getTasks } = require('./lib/todo');
+const { getTasks } = require('./lib/tasks');
 const { generateConfig } = require('./lib/config');
 const { printTasks } = require('./lib/printer');
 
@@ -28,7 +28,7 @@ program
   .command('now')
   .description('show my tasks in progress')
   .option('-d, --show-description', 'Show Description', false)
-  .action(async function({ showDescription }) {
+  .action(async function ({ showDescription }) {
     const tasks = await getTasks(config.targetProcess.url, config.targetProcess.token, {
       user: config.filter.user,
       inProgress: true,
@@ -43,7 +43,7 @@ program
   .alias('n')
   .description('show unassigned tasks')
   .option('-d, --show-description', 'Show Description', false)
-  .action(async function({ showDescription }) {
+  .action(async function ({ showDescription }) {
     const tasks = await getTasks(config.targetProcess.url, config.targetProcess.token, {
       team: config.filter.team,
       currentSprint: true,
@@ -59,7 +59,7 @@ program
   .alias('t')
   .description('show all tasks for my team')
   .option('-d, --show-description', 'Show Description', false)
-  .action(async function({ showDescription }) {
+  .action(async function ({ showDescription }) {
     const tasks = await getTasks(config.targetProcess.url, config.targetProcess.token, {
       team: config.filter.team,
       currentSprint: true,
